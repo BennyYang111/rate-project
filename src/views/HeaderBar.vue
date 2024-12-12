@@ -1,7 +1,7 @@
 <template>
   <div class="headerBar">
     <a href="/RateAll">
-      <img src="@/assets/images/logo/CDF_logo.png" />
+      <img src="@/assets/images/logo/dog.png" />
     </a>
     <q-slide-transition>
       <ul
@@ -9,7 +9,7 @@
         :class="{ 'responsive-nav': showResponsiveNav, 'show-responsive-nav': showResponsiveNav }"
       >
         <li class="nav-item" v-for="nav in navBarList" :key="nav.id">
-          <RouterLink class="nav-font" :to="nav.value"> {{ nav.label }}</RouterLink>
+          <RouterLink class="nav-font" :to="nav.value"> {{ nav.label }} {{ console.log(nav.label) }}</RouterLink>
         </li>
       </ul>
     </q-slide-transition>
@@ -44,6 +44,10 @@ router.afterEach(() => {
 </script>
 
 <style scoped>
+img {
+  height: 100px;
+  width: 100px;
+}
 .headerBar {
   height: 92px;
   align-items: flex-end;

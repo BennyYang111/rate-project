@@ -1,6 +1,6 @@
 <template>
   <!-- <q-carousel v-model="activeSlideIndex" style="background-color: whitesmoke"></q-carousel> -->
-  <div style="background-color: aqua">
+  <!--<div style="background-color: aqua">
     123
     <q-carousel v-model="activeSlideIndex" style="background-color: whitesmoke"
       >55555
@@ -8,7 +8,7 @@
       <q-carousel-slide name="slide2" class="bg-secondary"> Slide 2 </q-carousel-slide>
       <q-carousel-slide name="slide3" class="bg-tertiary"> Slide 3 </q-carousel-slide>
     </q-carousel>
-  </div>
+  </div>-->
   <div class="q-pa-md q-gutter-sm">
     <div class="text-h4">各國匯率</div>
   </div>

@@ -5,7 +5,7 @@
         <form @submit.prevent="">
           <q-card bordered class="login-card">
             <q-card-section>
-              <div class="text-h5" style="text-align: center">歡迎登入開發金點</div>
+              <div class="text-h5" style="text-align: center">歡迎登入</div>
               <span>測試(Id: A123456789, password: 123456)</span>
               <br />
               <q-input
@@ -15,7 +15,7 @@
                 class="input-field"
                 placeholder="輸入身分證字號"
                 autocomplete="current-username"
-                :rules="[(val) => val !== '' || usernameErrMsg]"
+                :rules="[(val : any) => val !== '' || usernameErrMsg]"
               />
               <br />
               <q-input
@@ -26,7 +26,7 @@
                 :type="showPassword ? 'text' : 'password'"
                 placeholder="輸入密碼"
                 autocomplete="current-password"
-                :rules="[(val) => val !== '' || passwordErrMsg]"
+                :rules="[(val : any) => val !== '' || passwordErrMsg]"
               >
                 <template v-slot:append>
                   <q-icon name="visibility_off" v-if="!showPassword" @click="showPassword = true" />
@@ -39,7 +39,7 @@
                   filled
                   v-model="captcha"
                   placeholder="輸入驗證碼"
-                  :rules="[(val) => val !== '' || captchaErrMsg]"
+                  :rules="[(val : any) => val !== '' || captchaErrMsg]"
                 />
                 <div class="separator"></div>
                 <div class="v3-margin">
@@ -209,7 +209,7 @@ function login() {
   ) {
     console.log('success')
     userStore.isLogin = true
-    alert('登入成功！！')
+    //alert('登入成功！！')
     useReCaptchaV3(useReCaptchaInstance)
     router.push('/RateAll')
   } else {
